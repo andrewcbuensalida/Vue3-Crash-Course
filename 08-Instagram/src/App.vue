@@ -1,14 +1,14 @@
 <script setup>
-import {onMounted} from "vue"
-import Nav from "./components/Nav.vue"
-import {RouterView} from "vue-router"
-import {useUserStore} from "./stores/users"
+import { onMounted } from "vue";
+import Nav from "./components/Nav.vue";
+import { RouterView } from "vue-router";
+import { useUserStore } from "./stores/users";
 
-const userStore = useUserStore()
+const userStore = useUserStore();
 
 onMounted(() => {
-  userStore.getUser()
-})
+  userStore.getUser();
+});
 </script>
 
 <template>
@@ -18,5 +18,4 @@ onMounted(() => {
   </main>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>

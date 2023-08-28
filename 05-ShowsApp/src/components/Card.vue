@@ -1,16 +1,13 @@
 <script setup>
-    import {defineProps} from "vue"
+import { defineProps } from "vue";
 
-    const {image, name } = defineProps([
-        'image',
-        'name',
-    ])
+const { image, name } = defineProps(["image", "name"]);
 </script>
 
 <template>
   <NCard>
     <template #cover>
-      <img :src="image">
+      <img :src="image" />
     </template>
     <h3>{{ name }}</h3>
     <slot></slot>
@@ -18,15 +15,11 @@
 </template>
 
 <style scoped>
-
 .n-card {
-    width: 200px;
-    margin:10px 20px;
-
+  width: 200px;
+  margin: 10px 20px;
 }
 .n-card img {
-    height: 250px
+  height: 250px;
 }
-
-
 </style>

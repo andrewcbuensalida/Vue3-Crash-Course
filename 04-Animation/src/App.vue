@@ -1,5 +1,5 @@
 <script setup>
-  import {RouterView, RouterLink} from "vue-router"
+import { RouterView, RouterLink } from "vue-router";
 </script>
 
 <template>
@@ -28,18 +28,18 @@
 </template>
 
 <style scoped>
-  .container {
-    max-width: 300px;
-    margin: 0 auto
-  }
-  
-  .router-links {
-    margin-bottom: 10px;
-  }
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
 
-  .router-links a {
-    margin-right: 10px;
-  }
+.router-links {
+  margin-bottom: 10px;
+}
+
+.router-links a {
+  margin-right: 10px;
+}
 
 /* route transitions */
 .route-enter-from {
@@ -47,13 +47,13 @@
   transform: translateX(100px);
 }
 .route-enter-active {
-  transition: all 0.3s ease-out; 
+  transition: all 0.3s ease-out;
 }
 .route-leave-to {
   opacity: 0;
   transform: translateX(-100px);
 }
 .route-leave-active {
-  transition: all 0.3s ease-in; 
+  transition: all 0.3s ease-in;
 }
 </style>

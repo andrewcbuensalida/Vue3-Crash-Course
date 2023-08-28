@@ -1,4 +1,11 @@
-# 02-Quiz
+https://www.youtube.com/watch?v=I_xLMmNeLDY
+
+Initialize project with
+npm init vue@latest
+
+=====================================
+
+# 02-Notes
 
 This template should help get you started developing with Vue 3 in Vite.
 
