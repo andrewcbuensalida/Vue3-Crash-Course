@@ -58,8 +58,9 @@ function myCheck() {
 					</p>
 					<p @click="showModal = false">x</p>
 				</div>
+        <!-- not sure if @input is correct, or should it be watch -->
 				<textarea
-					@input="myCheck"
+					@input="myCheck" 
 					v-model="newNote"
 					ref="textAreaRef"
 				/>

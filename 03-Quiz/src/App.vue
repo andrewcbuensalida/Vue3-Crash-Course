@@ -1,11 +1,11 @@
 <script setup>
 import { RouterView } from "vue-router";
-import QuizesView from "./views/QuizesView.vue";
 </script>
 
 <template>
   <div class="container">
-    <RouterView />
+    <!-- RouterView is not a component so can't pass data through props. Would have to use useRoute route.params-->
+    <RouterView /> 
   </div>
 </template>
 

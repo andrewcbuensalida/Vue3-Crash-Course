@@ -1,6 +1,6 @@
 <script setup>
 import { defineProps } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter } from "vue-router"; // useRouter allows us to push to different routes. useRoute allows use to get information of the url.
 
 const router = useRouter();
 const { quiz } = defineProps(["quiz"]);
@@ -11,6 +11,7 @@ const navigateToQuiz = () => {
 </script>
 
 <template>
+  <!-- could probably use RouterLink instead of div with click navigateToQuiz -->
   <div class="card" @click="navigateToQuiz">
     <img :src="quiz.img" alt="" />
     <div class="card-text">

@@ -7,7 +7,7 @@ import { ref, computed } from "vue";
 import quizes from "../data/quizes.json";
 
 const route = useRoute();
-const quizId = parseInt(route.params.id);
+const quizId = parseInt(route.params.id); // could get id because we defined it in router path
 const quiz = quizes.find((q) => q.id === quizId);
 const currentQuestionIndex = ref(0);
 const numberOfCorrectAnswers = ref(0);

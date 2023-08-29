@@ -34,7 +34,7 @@ const enter = (el) => {
       <h1>Quizes</h1>
       <input v-model.trim="search" type="text" placeholder="Search..." />
     </header>
-    <div class="options-container">
+    <div class="options-container" v-if="quizes.length > 0">
       <TransitionGroup @before-enter="beforeEnter" @enter="enter" appear>
         <Card
           v-for="(quiz, index) in quizes"
@@ -44,6 +44,7 @@ const enter = (el) => {
         />
       </TransitionGroup>
     </div>
+    <div v-else>Quizzes not found</div>
   </div>
 </template>
 
