@@ -13,8 +13,8 @@ const currentQuestionIndex = ref(0);
 const numberOfCorrectAnswers = ref(0);
 const showResults = ref(false);
 
+// Instead of this two step process of defining questionStatus state then watching it, just do computed method below. Without these, the QuizHeader will not update.
 // const questionStatus = ref(`${currentQuestionIndex.value}/${quiz.questions.length}`)
-
 // watch(() => currentQuestionIndex.value, () => {
 //     questionStatus.value = `${currentQuestionIndex.value}/${quiz.questions.length}`
 // })
@@ -46,10 +46,11 @@ const onOptionSelected = (isCorrect) => {
       :barPercentage="barPercentage"
     />
     <div>
+      <!-- @ means it's an event -->
       <Question
         v-if="!showResults"
         :question="quiz.questions[currentQuestionIndex]"
-        @selectOption="onOptionSelected"
+        @selectOption="onOptionSelected" 
       />
       <Result
         v-else
